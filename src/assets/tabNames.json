@@ -1,0 +1,239 @@
+{
+    "tabs": [
+        {
+            "id": 0,
+            "tabName": "Account/Client Selection",
+            "subItems": [
+                {
+                    "id": 0,
+                    "item": "Current Vs Target Allocation1"
+                },
+                {
+                    "id": 1,
+                    "item": "Portfolio Holdings1"
+                },
+                {
+                    "id": 2,
+                    "item": "Performance Review1"
+                },
+                {
+                    "id": 3,
+                    "item": "Realized Capital Gains1"
+                },
+                {
+                    "id": 4,
+                    "item": "Transaction Details1"
+                },
+                {
+                    "id": 5,
+                    "item": "Fixed Income Characters1"
+                },
+                {
+                    "id": 6,
+                    "item": "Equity Characteristics1"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "tabName": "Portfolio and Performance Review",
+            "subItems": [
+              {
+                "id": 0,
+                "item": "Current Vs Target Allocation2"
+              },
+              {
+                "id": 1,
+                "item": "Portfolio Holdings2"
+              },
+              {
+                "id": 2,
+                "item": "Performance Review2"
+              },
+              {
+                "id": 3,
+                "item": "Realized Capital Gains2"
+              },
+              {
+                "id": 4,
+                "item": "Transaction Details2"
+              },
+              {
+                "id": 5,
+                "item": "Fixed Income Characters2"
+              },
+              {
+                "id": 6,
+                "item": "Equity Characteristics2"
+              }
+            ]
+        },
+        {
+            "id": 2,
+            "tabName": "Planning and Recommendation",
+            "subItems": [
+              {
+                "id": 0,
+                "item": "Current Vs Target Allocation3"
+              },
+              {
+                "id": 1,
+                "item": "Portfolio Holdings3"
+              },
+              {
+                "id": 2,
+                "item": "Performance Review3"
+              },
+              {
+                "id": 3,
+                "item": "Realized Capital Gains3"
+              },
+              {
+                "id": 4,
+                "item": "Transaction Details3"
+              },
+              {
+                "id": 5,
+                "item": "Fixed Income Characters3"
+              },
+              {
+                "id": 6,
+                "item": "Equity Characteristics3"
+              }
+            ]
+        },
+        {
+            "id": 3,
+            "tabName": "Investment Policy Statement",
+            "subItems": [
+              {
+                "id": 0,
+                "item": "Current Vs Target Allocation4"
+              },
+              {
+                "id": 1,
+                "item": "Portfolio Holdings4"
+              },
+              {
+                "id": 2,
+                "item": "Performance Review4"
+              },
+              {
+                "id": 3,
+                "item": "Realized Capital Gains4"
+              },
+              {
+                "id": 4,
+                "item": "Transaction Details4"
+              },
+              {
+                "id": 5,
+                "item": "Fixed Income Characters4"
+              },
+              {
+                "id": 6,
+                "item": "Equity Characteristics4"
+              }
+            ]
+        },
+        {
+            "id": 4,
+            "tabName": "Banking Accounts",
+            "subItems": [{
+                "id": 0,
+                "item": "Current Vs Target Allocation5"
+              },
+              {
+                "id": 1,
+                "item": "Portfolio Holdings5"
+              },
+              {
+                "id": 2,
+                "item": "Performance Review5"
+              },
+              {
+                "id": 3,
+                "item": "Realized Capital Gains5"
+              },
+              {
+                "id": 4,
+                "item": "Transaction Details5"
+              },
+              {
+                "id": 5,
+                "item": "Fixed Income Characters5"
+              },
+              {
+                "id": 6,
+                "item": "Equity Characteristics5"
+              }
+            ]
+        },
+        {
+            "id": 5,
+            "tabName": "Custom Contents",
+            "subItems": [{
+                "id": 0,
+                "item": "Current Vs Target Allocation6"
+              },
+              {
+                "id": 1,
+                "item": "Portfolio Holdings6"
+              },
+              {
+                "id": 2,
+                "item": "Performance Review6"
+              },
+              {
+                "id": 3,
+                "item": "Realized Capital Gains6"
+              },
+              {
+                "id": 4,
+                "item": "Transaction Details6"
+              },
+              {
+                "id": 5,
+                "item": "Fixed Income Characters6"
+              },
+              {
+                "id": 6,
+                "item": "Equity Characteristics6"
+              }
+            ]
+        },
+        {
+            "id": 6,
+            "tabName": "Cover Slide",
+            "subItems": [{
+                "id": 0,
+                "item": "Current Vs Target Allocation7"
+              },
+              {
+                "id": 1,
+                "item": "Portfolio Holdings7"
+              },
+              {
+                "id": 2,
+                "item": "Performance Review7"
+              },
+              {
+                "id": 3,
+                "item": "Realized Capital Gains7"
+              },
+              {
+                "id": 4,
+                "item": "Transaction Details7"
+              },
+              {
+                "id": 5,
+                "item": "Fixed Income Characters7"
+              },
+              {
+                "id": 6,
+                "item": "Equity Characteristics7"
+              }
+            ]
+        }
+    ]
+}

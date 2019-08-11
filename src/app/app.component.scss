@@ -1,0 +1,159 @@
+$Helvetica: 'Helvetica';
+$Verdana: 'verdana';
+$bg: #333;
+$grey: #eee;
+$defaultFontSize: 16px;
+
+%iteration-glyph{
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+%menu-item{
+  list-style: none;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+@mixin fontFamily($font-fam, $font-size, $font-color) {
+  font-family: $font-fam;
+  font-size: $font-size;
+  color: $font-color;
+}
+
+.header {
+  text-align: center;
+}
+
+.bg{
+  width: 100%;
+  height: 600px;
+}
+
+.isVisble{
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  transition: visibility 0.5s ease-in-out 0.1s,
+  opacity 0.3s ease-in-out 0.1s,
+  height 0.2s ease-out 0.1s;
+}
+
+.notVisible{
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  transition: visibility 0.5s ease-in-out 0.1s,
+  opacity 0.3s ease-in-out 0.1s,
+  height 0.2s ease-out 0.1s;
+}
+
+.panelWrapper {
+  position: relative;
+
+  .underline{
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      bottom:0;
+      left:0;
+      right:0;
+      border-bottom: 4px solid $grey;
+    }
+  }
+
+  .inProgressTab{
+    &:after{
+       border-bottom: 4px solid yellow;
+    }
+  }
+
+  .panel{
+    background-color: $bg;
+    height: auto;
+    width: 100%;
+    min-height: 50px;
+    height:80px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: height 0.4s ease-in-out 0.1s;
+
+    @include fontFamily($Helvetica, $defaultFontSize, $grey);
+
+    .panelMenu{
+      @extend %menu-item;
+    }
+
+    .subPanel{
+      transition: all 0.4s ease-in-out 0.1s;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      border-top: 1px solid $grey
+    }
+
+    .tabNameHolder{
+      display: flex;
+    }
+
+    .numberGlyph {
+      @extend %iteration-glyph;
+      width: 30px;
+      height: 30px;
+      background-color: $grey;
+      @include fontFamily($Verdana, $defaultFontSize, $bg);
+
+      transition: background-color 0.1s ease-in-out 0.1s,
+      font-size 0.1s ease-in-out 0.1s
+    }
+
+    // .inProgressTab .numberGlyph {
+    //   color: yellow
+    // }
+
+    .completedGlyph{
+      @extend %iteration-glyph;
+      border-radius: 4px;
+      background-color: green;
+    }
+
+    .inProgressGlyph {
+      color: #000;
+      background-color: yellow;
+    }
+  }
+
+  .subPanelWrapper{
+    background-color: $bg;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .subPanelMenu {
+      @extend %menu-item;
+      padding: 2% 10px;
+    }
+  }
+}
+
+.open {
+  .panel {
+    height: 100px;
+
+    .numberGlyph {
+      @include fontFamily($Helvetica, 36px, $grey);
+      background-color: transparent;
+    }
+
+    .inProgressGlyph{
+      @include fontFamily($Helvetica, 36px, yellow);
+    }
+  }
+}
