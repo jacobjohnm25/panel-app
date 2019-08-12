@@ -13,15 +13,16 @@
     <li *ngFor="let tab of arrTabs; let i=index" [value]="tab.id"
         [ngClass]="['panelMenu',
         id === tab.id && show ? 'underline' : '',
-        inProgress ? 'inProgressTab' : '']"
+        tabMenuIdArr[i].inProgress ? 'inProgressTab' : '',
+        tabMenuIdArr[i].completed ? 'completedTab' : '']"
         (mouseenter)="onMouseEnter($event)"
         (click)="onClickMenu($event)"
     >
-      <div class="completedGlyph" *ngIf="completed">Complete</div>
+      <div class="completedPill" *ngIf="tabMenuIdArr[i].completed">Completed</div>
       <div class="tabNameHolder">
         <div
-        [ngClass]="['numberGlyph',  inProgress ? 'inProgressGlyph' : '',
-        completed ? 'completed' : '']"
+        [ngClass]="['numberGlyph',  tabMenuIdArr[i].inProgress ? 'inProgressGlyph' : '',
+        tabMenuIdArr[i].completed ? 'completedGlyph' : '']"
         >{{i+1}}</div>
         <p class="tabName">{{tab.tabName}}</p>
       </div>

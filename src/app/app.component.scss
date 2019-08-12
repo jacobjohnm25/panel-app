@@ -1,7 +1,11 @@
-$Helvetica: 'Helvetica';
-$Verdana: 'verdana';
+$Helvetica: "Helvetica Neue", 'Helvetica', 'Arial', sans-serif;
+$Verdana: 'Verdana', 'Geneva', sans-serif;
 $bg: #333;
 $grey: #eee;
+$yellow: #FFD838;
+$green: #46B33C;
+$black: #000;
+$white: #fff;
 $defaultFontSize: 16px;
 
 %iteration-glyph{
@@ -17,6 +21,8 @@ $defaultFontSize: 16px;
   display: flex;
   align-items: center;
   height: 100%;
+  justify-content: center;
+  flex-direction: column;
 }
 
 @mixin fontFamily($font-fam, $font-size, $font-color) {
@@ -69,7 +75,13 @@ $defaultFontSize: 16px;
 
   .inProgressTab{
     &:after{
-       border-bottom: 4px solid yellow;
+      border-bottom: 4px solid $yellow;
+    }
+  }
+
+  .completedTab {
+    &:after {
+      border-bottom: 4px solid $green;
     }
   }
 
@@ -101,6 +113,12 @@ $defaultFontSize: 16px;
 
     .tabNameHolder{
       display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .tabName{
+      margin-left: 5px;
     }
 
     .numberGlyph {
@@ -114,19 +132,22 @@ $defaultFontSize: 16px;
       font-size 0.1s ease-in-out 0.1s
     }
 
-    // .inProgressTab .numberGlyph {
-    //   color: yellow
-    // }
-
-    .completedGlyph{
+    .completedPill{
       @extend %iteration-glyph;
       border-radius: 4px;
-      background-color: green;
+      background-color: $green;
+      align-self: flex-start;
+      margin-left: 40px;
     }
 
     .inProgressGlyph {
-      color: #000;
-      background-color: yellow;
+      color: $black;
+      background-color: $yellow;
+    }
+
+    .completedGlyph {
+      color: $white;
+      background-color: $green;
     }
   }
 
@@ -153,7 +174,11 @@ $defaultFontSize: 16px;
     }
 
     .inProgressGlyph{
-      @include fontFamily($Helvetica, 36px, yellow);
+      @include fontFamily($Helvetica, 36px, $yellow);
+    }
+
+    .completedGlyph {
+      @include fontFamily($Helvetica, 36px, $green);
     }
   }
 }

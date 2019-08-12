@@ -9,12 +9,68 @@ import { ConfigService, Config } from '../app/config/config.service';
 
 export class AppComponent implements OnInit{
   title = 'An Interactive Bottom Panel App';
-  arrTabs: [];
+  arrTabs: [{
+      id: 0,
+      tabName: "",
+      subItems: [
+      {
+        id: 0,
+        item: ""
+      },
+    ]
+  },
+  {
+    id: 1,
+    tabName: "",
+    subItems: [
+      {
+        id: 0,
+        item: ""
+      },
+    ]
+  }];
   show = false;
   id = 0;
-  tabId = '';
-  inProgress=false;
-  completed=false;
+  tabId = 0;
+  tabMenuIdArr = [
+    {
+      id: 0,
+      inProgress: false,
+      completed: false,
+    },
+    {
+      id: 1,
+      inProgress: false,
+      completed: false,
+    },
+    {
+      id: 2,
+      inProgress: false,
+      completed: false,
+    },
+    {
+      id: 3,
+      inProgress: false,
+      completed: false,
+    },
+    {
+      id: 4,
+      inProgress: false,
+      completed: false,
+    },
+    {
+      id: 5,
+      inProgress: false,
+      completed: false,
+    },
+    {
+      id: 6,
+      inProgress: false,
+      completed: false,
+    }
+  ];
+
+
 
   onMouseEnter(event){
     this.show = true;
@@ -26,10 +82,15 @@ export class AppComponent implements OnInit{
   }
 
   onClickSubMenu(event) {
-    this.inProgress = true;
     this.tabId = event.target.getAttribute('parentId');
+    if (this.tabId == 0 || this.tabId == 1){
+      this.tabMenuIdArr[this.tabId].inProgress = true;
+      var subTabLen = this.arrTabs[this.tabId].subItems.length;
+      if (event.target.id == (subTabLen-1)){
+        this.tabMenuIdArr[this.tabId].completed = true
+      }
+    }
     alert(event.target.innerText);
-    console.log('object', this.tabId);
   }
 
   constructor(private configService: ConfigService) { }
